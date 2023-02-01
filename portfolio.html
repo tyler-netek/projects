@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css"></link>
+    <script src="https://kit.fontawesome.com/50e3e4ef2d.js" crossorigin="anonymous"></script>"
+</head>
+<body>
+   <div id="header-portfolio">
+    <div class="container">
+        <nav>
+            <p class="logo" text-hover="Software Engineer">Tyler J. Netek</p> 
+            <ul id="sidemenu">
+                <li><a href="index.html">Return to Home Page</a></li>
+                <li>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/tylernetek/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/tyler-netek"><i class="fa-brands fa-github"></i></a>
+                </div>
+                </li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+<div class="title-top">
+  <h1 id="title-project">My Portfolio:</h1>
+</div>
+<div id="menu">
+  <ul>
+    <li><a href="#project1">Project 1</a></li>
+    <li><a href="#project2">Project 2</a></li>
+    <li><a href="#project3">Project 3</a></li>
+    <!-- Additional projects go here -->
+  </ul>
+</div>
+<h1 class="objectives-title">Objectives:</h1>
+<h2 id='explain'>Working towards becoming a great software engineer, 
+  the ideal outcome for completing the projects on this page is that I get to
+   work to improve my skillset in meaningful ways outside of my 
+   comfort zone. I know the lessons I've learned working on these first few projects will serve
+  to be beneficial further on in my career.
+   Moving forward, I aim to hold myself to a high standard as a professional
+  and improve my skillset to more easily do the following effectively:</h2>
+<div class="objectives">
+    <ul>
+        <li>Designing and implementing efficient and scalable solutions to complex problems</li>
+        <li>Creating maintainable and well-documented code</li>
+        <li>Adhering to industry standards and best practices to ensure security and reliability</li>
+        <li>Continuously learning and staying up-to-date with the latest technologies and trends</li>
+        <li>Collaborating effectively with cross-functional teams to deliver high-quality products</li>
+    </ul>
+</div>
+<form onsubmit="event.preventDefault()">
+  <input type="text" id="search" placeholder="Filter projects by title...">
+</form>
+        <div id="project-grid">
+    <div class="project">
+      <h3 id="project1">Project 1</h3>
+      <img src="Pictures/dark-2.jpg" alt="Project 1">
+      
+      <div class="project-description">
+        <p>This is a description of Project 1. It includes information about what the project is, what technologies were used, and any notable features or accomplishments.</p>
+      </div>
+    </div>
+    <div class="project">
+      <h3 id='project2'>Project 2</h3>
+      <img src="Pictures/dark.jpg" alt="Project 2">
+      <div class="project-description">
+        <p>This is a description of Project 2. It includes information about what the project is, what technologies were used, and any notable features or accomplishments.</p>
+      </div>
+    </div>
+    <div class="project">
+      <h3 id="project3">Project 3</h3>
+      <img src="Pictures/dark-3.jpg" alt="Project 3">
+      
+      <div class="project-description">
+        <p>This is a description of Project 3. It includes information about what the project is, what technologies were used, and any notable features or accomplishments.</p>
+      </div>
+    </div>
+    <!-- Additional projects go here -->
+  </div>
+
+  
+
+<script>
+  // Get the input element
+  const searchInput = document.querySelector("#search");
+  // Get the project grid
+  const projectGrid = document.querySelector("#project-grid");
+
+  // Add an event listener to the input element to listen for changes
+  searchInput.addEventListener("input", e => {
+    // Get the input value
+    const searchValue = e.target.value.toLowerCase();
+    // Get all the project elements
+    const projects = projectGrid.querySelectorAll(".project");
+    // Loop through the project elements
+    projects.forEach(project => {
+      // Get the project name
+      const projectName = project.querySelector("h3").textContent.toLowerCase();
+      // Check if the input value is in the project name
+      if (projectName.indexOf(searchValue) === -1) {
+        // If not, hide the project
+        project.style.display = "none";
+      } else {
+        // If it is, show the project
+        project.style.display = "block";
+      }
+    });
+  });
+</script>
+
+  <style>
+body {
+  height: 200vh; /* 100% of the viewport height */
+}
+.menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 1;
+}
+#title-project{
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  color: lightskyblue;
+  font-size: 45px;
+  font-family: 'Times New Roman', Times, serif;
+}
+#title-project:hover {
+  color:blanchedalmond;
+  
+  transition: 0.9s;
+}
+.objectives {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  color: lightskyblue;
+  font-size: 18px;
+  list-style-type: none;
+}
+.objectives li {
+  margin: 45px;
+  line-height: 40px;
+}
+.objectives li:hover {
+  width: 89%;
+  box-shadow: 0px 0px 10px 1px white;
+  transition: .5s;
+  cursor: pointer;
+}
+.objectives-title {
+  text-align: center;
+  margin: 50px;
+  color: lightskyblue;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 45px;
+}
+.objectives-title:hover {
+  color: blanchedalmond;
+  transition: .75s;
+}
+#explain {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+  margin: 30px;
+  text-align: center;
+  color: darkgray
+}
+#explain:hover {
+  color: silver;
+  transition: .3s;
+}
+.menu ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+#menu a {
+  color: lightskyblue;
+  text-decoration: none;
+  text-align: left;
+  font-size: 27px;
+  font-weight: lighter;
+  display: block;
+  padding: 10px;
+}
+
+#menu a:hover {
+  background-color: #ccc;
+  transition: 1s;
+}
+/* Project Grid */
+#project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.project {
+  position: relative;
+  width: 75%; /* original size */
+  height: 100px;
+  margin: 30px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgb(192, 154, 154);
+  transition: 0.9s;
+}
+.project:hover {
+    width: 75%; /* expanded size */
+    height: 500px;
+}
+.project h3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  color: gray;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease-out;
+  font-size: x-large;
+}
+
+/* Hide project when search value is not in project name */
+.project[style="display: none;"] {
+  display: none;
+}
+
+/* Make the images larger */
+.project img {
+  width: 100%;
+  height: 400px;
+}
+
+
+
+.project:hover {
+  box-shadow: 0px 0px 20px #2980b9;
+}
+.project-description {
+  padding: 10px;
+  text-align: center;
+  background-color: black;
+  margin-top: 0px;
+  color: white;
+}
+
+
+/* Search Bar */
+#search {
+  margin: 50px auto;
+  display: block;
+  width: 50%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-top: 50px;
+}
+
+input[type=submit] {
+  width: 10%;
+  background-color: #2980b9;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #4CAF50;
+}
+@media screen and (max-width: 768px) {
+  .project {
+    width: 90%;
+  }
+}
+
+  </style>
+</body>
+</html>

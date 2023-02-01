@@ -1,0 +1,28 @@
+.title-top {
+    color: lightskyblue;
+    text-align: center;
+}
+#other {
+    color: red;
+}
+.middle {
+    text-align: center;
+    margin: 15px;
+    color: darkgray;
+}
+.paragraph {
+    text-align: center;
+    display: block;
+    margin: 25px;
+    margin-top: 5px;
+    padding: 25px;
+    border-style: dotted;
+    border-color: silver;
+}
+.list-one {
+    border-style: solid;
+    display: block;
+    text-align: center;
+    margin: 100px;
+    padding: 10px
+}

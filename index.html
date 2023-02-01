@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" type='text/css' href="styles.css">
+    <script src="https://kit.fontawesome.com/50e3e4ef2d.js" crossorigin="anonymous"></script>"
+</head>
+<body>
+   <div id="header">
+    <div class="container">
+        <nav>
+            <p class="logo" text-hover="Software Engineer">Tyler J. Netek</p> 
+            <ul id="sidemenu">
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/tylernetek/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/tyler-netek"><i class="fa-brands fa-github"></i></a>
+                </div>
+                </li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h3 id="home"><span class="span1">Hey there!</span> My name is <span class="span1"><a href='https://www.linkedin.com/in/tylernetek/'>Tyler J. Netek</a></span>.<br>I am an <span class="span1">aspiring</span> <a href="https://www.youtube.com/watch?v=pKO9UjSeLew">Software Engineer.</a></h3>
+            <h4>I am honored that you are here to follow my journey on the way to becoming a great Software Engineer. <br>
+                I will document my progress down this <span class="span1">road</span> here as I complete new projects in pursuit of my dream career.</h4>
+            <div class="img-container">
+                <div class="gallery">
+                    <div class="img-box"><h3></h3></div>
+                    <div class="img-box"><h3></h3></div>
+                    <div class="img-box"><h3></h3></div>
+                    <div class="img-box"><h3></h3></div>
+                    <div class="img-box"><h3></h3></div>
+                    <div class="img-box"><h3></h3></div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+   </div> 
+   <div id="about">
+        <div class="row">
+            <div class="about-column-one">
+                <img src="Pictures/profpic.jpg">
+            </div>
+            <div class="about-column-two">
+                <h2 id='about-me' class="sub-title">My Story</h2>
+                <p id="essay">I am a Spring 2022 graduate from The University of Houston with a Bachelor of Business Administration
+                    in Management Information Systems and the distinction of Summa Cum Laude (3.98 GPA). I began my career as a Cloud Analyst
+                    on the Security and Controls team at Oracle Corporation in Austin, TX where I maintained well-above the satisfactory utilization percentage as a consultant and took on my first professional coding projects in the form of
+                    python scripting to automate tedious consulting tasks both for clients and internally. Moving forward, I am blessed to be joining
+                    Capital One Financial's <i>Capital One Developer Academy (CODA)</i> as an associate to work towards becoming a Software Engineer in their 
+                    Technology Development Program. I was also recently accepted into Georgia Tech's Master of Science - Analytics Program where I will be building a Data Science
+                    focused skillset part-time on evenings and weekends. I've continued to spend countless hours watching YouTube tutorials
+                    about programming, using freeCodeCamp and other similar resources, and practicing on CodeWars.com to become a better programmer.
+                    I am so excited about my future as a Software Engineer, and once again I am really thankful that you've taken the time to 
+                    follow my journey. I am incredibly excited to document my progress here, and look back in the future. <br><br>
+                    In high school, I really found my people within my Pre-AP and AP Computer Science courses who were okay with being nerdy and excited about tech, 
+                    which was a welcome break from the lack of camaraderie I found on our school's basketball team. That interest in computer science persisted, 
+                    but I also had a strong interest in 
+                    learning about business due to idolizing successful tech entrepreneurs I had read about my entire life.
+                    This interest in both business and computer science led me to pursue a degree in Management Information 
+                    Systems which seemed to be a great combination of both. During my time as an upperclassman at UH, I 
+                    took introductory courses covering Java, SQL, Python, R, HTML/CSS, JavaScript and other technical topics
+                    and I fell in love with those courses. My professors were incredibly interesting, learning the ins-and-outs 
+                    of computers was fascinating, and I really just wanted to know more. I graduated feeling like I had a baseline
+                    understanding, but knew how dedicated I was to mastering the concepts I'd only grazed over through my undergraduate
+                    coursework. <br><br>
+
+                    So that's where I am now. I'm dead set on becoming a world-class Software Engineer, and I'm dedicating my free time during 
+                    evenings and on weekends to achieve my lofty ambitions and anticipating starting my career as a Software Engineer at Capital One.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Full Stack Web Development</span><br>JavaScript, Mobile, Database, Cloud, and API Development</li>
+                        <li><span>Other Technologies (Coursework or Experience)</span><br>MS - Analytics Candidate, Python (Pandas, NumPy, Django, etc.), R (ggplot2, dplyr, tidyr), SQL, NodeJS, React, HTML, CSS, Java</li>
+                        <li><span>Scripting</span><br>Using Scripting to Automate Work Tasks - Python & Shell Scripting</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023 - Present</span><br>Associate Software Engineer at Capital One - Richmond, VA</li>
+                        <li><span>2022 - 2023</span><br>Cloud Analyst (Security & Controls) at Oracle Corporation - Austin, TX </li>
+                        <li><span>2021 - 2022</span><br>Capital Projects Intern at Daily Thermetrics - Houston, TX</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>University of Houston, Bachelor of Business Administration - Management Information Systems</span><br>4.0 Major GPA, 3.98 Cumulative GPA</li>
+                        <li><span>Accolades</span><br>Dean's List (every semester), Summa Cum Laude, Honors College Member, Completed College in Three Years (Fall 2019 - Spring 2022)</li>
+                        <li><span>Miscellaneous</span><br>National Model United Nations - Outstanding Position Paper Award (2020 Manhattan, New York), Master of Science - Analytics Candidate at Georgia Tech (Expected: 2024, Part-Time)</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+   </div>
+   <div id="services">
+    <div class="container">
+        <h1 class="sub-title" id="proficiencies">Proficiencies</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Front End Development</h2>
+                <p>HTML, CSS, JavaScript, VSCode, JQuery, Angular, React</p>
+                <a href="https://eloquentjavascript.net/">Learn more...</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-java"></i>
+                <h2>Back End Development</h2>
+                <p>Python (Django, Pandas, NumPy, etc.), R, Java, SQL, MongoDB, Node.js, GitHub.</p>
+                <a href="https://www.amazon.com/Node-js-Web-Development-Server-side-development/dp/1838987576">Learn more...</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-python"></i>
+                <h2>Misc.</h2>
+                <p>Automating enterprise tasks, using Python and other similar scripting tools, Data Science/Analytics.</p>
+                <a href="https://automatetheboringstuff.com/">Learn more...</a>
+            </div>
+        </div>
+    </div>
+
+   </div>
+   <div id="portfolio">
+    <div class="container port">
+        <h1 class="sub-title">Portfolio</h1>
+        <div class="work-list">
+            <div class="work">
+                <p><a id='portfolio-link' href="portfolio.html">Click here to see my projects...</a></p>
+            </div>
+        </div>
+
+
+    </div>
+
+   </div>
+   <!-----contact info------>
+   <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>tyler.netek@outlook.com</p>
+                <p><i class="fa-sharp fa-solid fa-phone"></i>(832) 299-8200</p>
+                <a href="Pictures/Tyler_Netek_Resume_2023.pdf" class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Name..." required>
+                    <input type="email" name="Email" placeholder="Email Address..." required>
+                    <textarea name="Message" rows="6" placeholder="Message..."></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">Copyright © Tyler J. Netek</div>
+   </div>
+   <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+   </script>
+   <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+   </script>
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyuDRaMXx9c9wuRSm44xmJ-o5zacy4otpFQtsjJ-uN2PPorGHqCHJ7_eyCX3JF-1So2Gw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully."
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    <script>
+        function searchProjects() {
+  // Get search input
+  const searchInput = document.getElementById('search').value.toLowerCase();
+
+  // Get all projects
+  const projects = document.getElementsByClassName('project');
+
+  // Loop through all projects
+  for (let i = 0; i < projects.length; i++) {
+    // Get project title
+    const title = projects[i].getElementsByTagName('h3')[0].textContent.toLowerCase();
+
+    // If the search input is not contained in the project title, hide the project
+    if (!title.includes(searchInput)) {
+      projects[i].style.display = 'none';
+    } else {
+      projects[i].style.display = 'block';
+    }
+  }
+}
+
+// Add event listener to search input
+const searchInput = document.getElementById('search');
+searchInput.addEventListener('keyup', searchProjects);
+    </script>
+</body>
+</html>
